@@ -13,6 +13,8 @@ import CoreGraphics
 
 public enum BodyJoint: String, Sendable, CaseIterable {
     case nose, neck
+    case leftEye, rightEye
+    case leftEar, rightEar
     case leftShoulder, rightShoulder
     case leftElbow, rightElbow
     case leftWrist, rightWrist
