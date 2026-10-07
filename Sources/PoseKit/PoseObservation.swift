@@ -35,9 +35,14 @@ public struct PoseObservation: Sendable {
     }
 
     public var points: [BodyJoint: Point]
+    /// Width ÷ height of the upright image the points were found in.
+    /// Normalized x and y span different pixel lengths on a non-square
+    /// frame, so true angles need x scaled by this. 1 when unknown.
+    public var aspectRatio: Double
 
-    public init(points: [BodyJoint: Point]) {
+    public init(points: [BodyJoint: Point], aspectRatio: Double = 1) {
         self.points = points
+        self.aspectRatio = aspectRatio
     }
 
     public func location(_ joint: BodyJoint, minConfidence: Double = 0.1) -> CGPoint? {
