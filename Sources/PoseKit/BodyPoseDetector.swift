@@ -15,6 +15,8 @@ public enum BodyPoseDetector {
 
     private static let jointMap: [(BodyJoint, VNHumanBodyPoseObservation.JointName)] = [
         (.nose, .nose), (.neck, .neck),
+        (.leftEye, .leftEye), (.rightEye, .rightEye),
+        (.leftEar, .leftEar), (.rightEar, .rightEar),
         (.leftShoulder, .leftShoulder), (.rightShoulder, .rightShoulder),
         (.leftElbow, .leftElbow), (.rightElbow, .rightElbow),
         (.leftWrist, .leftWrist), (.rightWrist, .rightWrist),
